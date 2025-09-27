@@ -92,7 +92,7 @@
             rgba(255, 107, 139, 0.8),
             rgba(255, 209, 102, 0.8)
           ),
-          url("https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+          url("https://images.unsplash.com/photo-1577303935007-0d306ee638cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
         background-size: cover;
         background-position: center;
         color: white;
@@ -201,7 +201,8 @@
 
       .about-image img {
         width: 100%;
-        height: auto;
+        height: 400px;
+        object-fit: cover;
         display: block;
         transition: transform 0.5s;
       }
@@ -591,10 +592,10 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Lustre' Dessert - Kelezatan yang Berkilau</h1>
+        <h1>Lustre' Dessert</h1>
         <p>
-          Setiap gigitan adalah pengalaman berkilau dengan rasa premium yang
-          memanjakan lidah. Dessert dengan kualitas terbaik dan penyajian
+          Kelezatan yang Berkilau - Setiap gigitan adalah pengalaman premium
+          yang memanjakan lidah dengan dessert berkualitas terbaik dan penyajian
           elegan.
         </p>
         <a href="#menu" class="btn sparkle">Jelajahi Menu</a>
@@ -604,7 +605,7 @@
     <!-- Business Profile Section -->
     <section id="profile">
       <div class="container">
-        <h2 class="section-title">Profil Lustre' Dessert</h2>
+        <h2 class="section-title">Profil Bisnis</h2>
         <div class="profile-grid">
           <div class="profile-card">
             <h3><i class="fas fa-gem"></i> Visi Kami</h3>
@@ -637,20 +638,20 @@
     <!-- About Product Section -->
     <section id="about" style="background-color: #fffaf0">
       <div class="container">
-        <h2 class="section-title">Kilau Kualitas Kami</h2>
+        <h2 class="section-title">Tentang Produk</h2>
         <div class="about-content">
           <div class="about-image">
             <img
-              src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
               alt="Lustre' Dessert Premium"
             />
           </div>
           <div class="about-text">
-            <h3>Kelezatan yang Memancarkan Kilau</h3>
+            <h3>Kilau Kualitas Kami</h3>
             <p>
               Lustre' Dessert menghadirkan pengalaman dessert tak terlupakan
               dengan kombinasi sempurna antara rasa, tekstur, dan penyajian
-              elegan.
+              elegan yang berkilau.
             </p>
 
             <div class="features">
@@ -671,10 +672,6 @@
                 <i class="fas fa-crown"></i>
                 <span>Penyajian elegan yang instagrammable</span>
               </div>
-              <div class="feature-item">
-                <i class="fas fa-award"></i>
-                <span>Konsistensi rasa yang selalu berkilau</span>
-              </div>
             </div>
           </div>
         </div>
@@ -684,7 +681,7 @@
     <!-- Menu Section -->
     <section id="menu">
       <div class="container">
-        <h2 class="section-title">Menu Berkilau Lustre'</h2>
+        <h2 class="section-title">Menu</h2>
         <div class="menu-tabs">
           <button class="tab-btn active" data-category="all">Semua Menu</button>
           <button class="tab-btn" data-category="cake">Kue Premium</button>
@@ -692,7 +689,6 @@
           <button class="tab-btn" data-category="special">
             Spesial Lustre'
           </button>
-          <button class="tab-btn" data-category="bundle">Paket Berkilau</button>
         </div>
 
         <div class="menu-grid">
@@ -751,24 +747,6 @@
           </div>
 
           <!-- Menu Item 4 -->
-          <div class="menu-item" data-category="bundle">
-            <div class="menu-image">
-              <img
-                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Lustre Box Premium"
-              />
-            </div>
-            <div class="menu-details">
-              <h3>Lustre Box Premium</h3>
-              <p>
-                Paket berisi 6 dessert signature dalam kemasan eksklusif
-                berkilau.
-              </p>
-              <div class="price">Rp 250.000</div>
-            </div>
-          </div>
-
-          <!-- Menu Item 5 -->
           <div class="menu-item" data-category="cake">
             <div class="menu-image">
               <img
@@ -786,7 +764,7 @@
             </div>
           </div>
 
-          <!-- Menu Item 6 -->
+          <!-- Menu Item 5 -->
           <div class="menu-item" data-category="special">
             <div class="menu-image">
               <img
@@ -803,6 +781,24 @@
               <div class="price">Rp 120.000</div>
             </div>
           </div>
+
+          <!-- Menu Item 6 -->
+          <div class="menu-item" data-category="pastry">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Lustre Box Premium"
+              />
+            </div>
+            <div class="menu-details">
+              <h3>Lustre Box Premium</h3>
+              <p>
+                Paket berisi 6 dessert signature dalam kemasan eksklusif
+                berkilau.
+              </p>
+              <div class="price">Rp 250.000</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -813,7 +809,7 @@
       style="background: linear-gradient(135deg, #fff0f5 0%, #fffaf0 100%)"
     >
       <div class="container">
-        <h2 class="section-title">Pesan Kilau Anda</h2>
+        <h2 class="section-title">Pemesanan</h2>
         <div class="order-container">
           <div class="order-info">
             <h3>Hubungi Lustre' Dessert</h3>
@@ -827,8 +823,8 @@
                 <i class="fab fa-whatsapp"></i>
                 <div>
                   <h4>WhatsApp Luxury</h4>
-                  <a href="https://wa.me/6281234567890" target="_blank"
-                    >+62 812-3456-7890</a
+                  <a href="https://wa.me/6281234952364" target="_blank"
+                    >+62 812-3495-2364</a
                   >
                 </div>
               </div>
@@ -908,14 +904,14 @@
                   <option value="Diamond Gelato">
                     Diamond Gelato - Rp 65.000
                   </option>
-                  <option value="Lustre Box Premium">
-                    Lustre Box Premium - Rp 250.000
-                  </option>
                   <option value="Ruby Cheesecake">
                     Ruby Cheesecake - Rp 95.000
                   </option>
                   <option value="Crystal Macaron">
                     Crystal Macaron - Rp 120.000
+                  </option>
+                  <option value="Lustre Box Premium">
+                    Lustre Box Premium - Rp 250.000
                   </option>
                 </select>
               </div>
@@ -984,7 +980,7 @@
               </li>
               <li><i class="fas fa-phone"></i> (021) 456-7890</li>
               <li><i class="fas fa-envelope"></i> hello@lustredessert.com</li>
-              <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
+              <li><i class="fab fa-whatsapp"></i> +62 812-3495-2364</li>
             </ul>
           </div>
         </div>
@@ -1053,7 +1049,7 @@
             `💫 Catatan: ${message || "Tidak ada"}`;
 
           window.open(
-            `https://wa.me/6281234567890?text=${whatsappMessage}`,
+            `https://wa.me/6281234952364?text=${whatsappMessage}`,
             "_blank"
           );
           this.reset();
@@ -1062,17 +1058,6 @@
       // Set minimum date for order form to today
       const today = new Date().toISOString().split("T")[0];
       document.getElementById("date").setAttribute("min", today);
-
-      // Add sparkle effect to menu items on hover
-      menuItems.forEach((item) => {
-        item.addEventListener("mouseenter", function () {
-          this.style.boxShadow = "0 20px 40px rgba(255, 107, 139, 0.3)";
-        });
-
-        item.addEventListener("mouseleave", function () {
-          this.style.boxShadow = "0 10px 30px rgba(255, 107, 139, 0.1)";
-        });
-      });
     </script>
   </body>
 </html>
