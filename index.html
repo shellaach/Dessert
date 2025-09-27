@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sweet Delights - Dessert Premium</title>
+    <title>Lustre' Dessert - Kelezatan yang Berkilau</title>
     <style>
       /* Reset dan Base Styles */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Poppins", "Segoe UI", sans-serif;
       }
 
       body {
-        background-color: #fff9f5;
+        background-color: #fffaf0;
         color: #333;
         line-height: 1.6;
       }
@@ -28,13 +28,13 @@
 
       /* Header Styles */
       header {
-        background-color: #ff6b8b;
+        background: linear-gradient(135deg, #ff6b8b 0%, #ffd166 100%);
         color: white;
         padding: 1rem 0;
         position: sticky;
         top: 0;
         z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 20px rgba(255, 107, 139, 0.3);
       }
 
       .header-content {
@@ -44,14 +44,16 @@
       }
 
       .logo {
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: bold;
         display: flex;
         align-items: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       .logo i {
         margin-right: 10px;
+        color: #ffd166;
       }
 
       nav ul {
@@ -60,92 +62,111 @@
       }
 
       nav ul li {
-        margin-left: 1.5rem;
+        margin-left: 2rem;
       }
 
       nav ul li a {
         color: white;
         text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
+        font-weight: 600;
+        transition: all 0.3s;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
       }
 
       nav ul li a:hover {
-        color: #ffe0e6;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
       }
 
       .mobile-menu {
         display: none;
         font-size: 1.5rem;
         cursor: pointer;
+        color: white;
       }
 
       /* Hero Section */
       .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        background: linear-gradient(
+            rgba(255, 107, 139, 0.8),
+            rgba(255, 209, 102, 0.8)
+          ),
           url("https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
         background-size: cover;
         background-position: center;
         color: white;
         text-align: center;
-        padding: 6rem 0;
+        padding: 8rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       }
 
       .hero h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: 1rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
       }
 
       .hero p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         max-width: 700px;
         margin: 0 auto 2rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
       }
 
       .btn {
         display: inline-block;
-        background-color: #ff6b8b;
+        background: linear-gradient(45deg, #ff6b8b, #ffd166);
         color: white;
-        padding: 0.8rem 1.5rem;
-        border-radius: 30px;
+        padding: 1rem 2rem;
+        border-radius: 50px;
         text-decoration: none;
         font-weight: bold;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(255, 107, 139, 0.4);
       }
 
       .btn:hover {
-        background-color: #ff4d73;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 107, 139, 0.6);
       }
 
       /* Section Styles */
       section {
-        padding: 5rem 0;
+        padding: 6rem 0;
       }
 
       .section-title {
         text-align: center;
         margin-bottom: 3rem;
-        color: #ff6b8b;
-        font-size: 2.2rem;
+        background: linear-gradient(45deg, #ff6b8b, #ffd166);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        font-weight: 700;
       }
 
       /* Business Profile Section */
       .profile-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
       }
 
       .profile-card {
         background: white;
-        border-radius: 10px;
-        padding: 2rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s;
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 10px 30px rgba(255, 107, 139, 0.1);
+        transition: all 0.3s;
+        border-left: 5px solid #ffd166;
       }
 
       .profile-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(255, 107, 139, 0.2);
       }
 
       .profile-card h3 {
@@ -153,10 +174,12 @@
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
+        font-size: 1.4rem;
       }
 
       .profile-card h3 i {
-        margin-right: 10px;
+        margin-right: 15px;
+        font-size: 1.8rem;
       }
 
       /* About Product Section */
@@ -164,26 +187,38 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 3rem;
+        gap: 4rem;
       }
 
       .about-image {
         flex: 1;
         min-width: 300px;
-        border-radius: 10px;
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 35px rgba(255, 107, 139, 0.2);
+        transform: rotate(-2deg);
       }
 
       .about-image img {
         width: 100%;
         height: auto;
         display: block;
+        transition: transform 0.5s;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.05);
       }
 
       .about-text {
         flex: 1;
         min-width: 300px;
+      }
+
+      .about-text h3 {
+        color: #ff6b8b;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
       }
 
       .features {
@@ -193,60 +228,68 @@
       .feature-item {
         display: flex;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(45deg, #fff0f5, #fffaf0);
+        border-radius: 10px;
+        border-left: 4px solid #ffd166;
       }
 
       .feature-item i {
         color: #ff6b8b;
-        margin-right: 10px;
-        font-size: 1.2rem;
+        margin-right: 15px;
+        font-size: 1.5rem;
       }
 
       /* Menu Section */
       .menu-tabs {
         display: flex;
         justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         flex-wrap: wrap;
+        gap: 1rem;
       }
 
       .tab-btn {
         background: white;
-        border: none;
-        padding: 0.8rem 1.5rem;
-        margin: 0 0.5rem 1rem;
-        border-radius: 30px;
+        border: 2px solid #ffd166;
+        padding: 1rem 2rem;
+        border-radius: 50px;
         cursor: pointer;
-        font-weight: 500;
+        font-weight: 600;
         transition: all 0.3s;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        color: #ff6b8b;
       }
 
       .tab-btn.active {
-        background-color: #ff6b8b;
+        background: linear-gradient(45deg, #ff6b8b, #ffd166);
         color: white;
+        border-color: transparent;
       }
 
       .menu-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2.5rem;
       }
 
       .menu-item {
         background: white;
-        border-radius: 10px;
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s;
+        box-shadow: 0 10px 30px rgba(255, 107, 139, 0.1);
+        transition: all 0.3s;
+        border: 2px solid #fff0f5;
       }
 
       .menu-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(255, 107, 139, 0.2);
+        border-color: #ffd166;
       }
 
       .menu-image {
-        height: 200px;
+        height: 250px;
         overflow: hidden;
       }
 
@@ -262,26 +305,30 @@
       }
 
       .menu-details {
-        padding: 1.5rem;
+        padding: 2rem;
       }
 
       .menu-details h3 {
         margin-bottom: 0.5rem;
-        color: #333;
+        color: #ff6b8b;
+        font-size: 1.3rem;
       }
 
       .price {
         color: #ff6b8b;
         font-weight: bold;
-        font-size: 1.2rem;
-        margin: 0.5rem 0;
+        font-size: 1.4rem;
+        margin: 1rem 0;
+        background: linear-gradient(45deg, #ff6b8b, #ffd166);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       /* Order Section */
       .order-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 3rem;
+        gap: 4rem;
       }
 
       .order-info {
@@ -297,22 +344,29 @@
         display: flex;
         align-items: center;
         margin-bottom: 1.5rem;
-        padding: 1rem;
+        padding: 1.5rem;
         background: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(255, 107, 139, 0.1);
+        transition: all 0.3s;
+        border-left: 4px solid #ffd166;
+      }
+
+      .contact-method:hover {
+        transform: translateX(10px);
       }
 
       .contact-method i {
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #ff6b8b;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
       }
 
       .contact-method a {
         color: #333;
         text-decoration: none;
         transition: color 0.3s;
+        font-weight: 500;
       }
 
       .contact-method a:hover {
@@ -323,29 +377,38 @@
         flex: 1;
         min-width: 300px;
         background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(255, 107, 139, 0.1);
       }
 
       .form-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       .form-group label {
         display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+        color: #ff6b8b;
       }
 
       .form-group input,
       .form-group select,
       .form-group textarea {
         width: 100%;
-        padding: 0.8rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        padding: 1rem;
+        border: 2px solid #fff0f5;
+        border-radius: 10px;
         font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #ffd166;
       }
 
       .form-group textarea {
@@ -355,9 +418,11 @@
 
       /* Footer */
       footer {
-        background-color: #333;
+        background: linear-gradient(135deg, #ff6b8b 0%, #ffd166 100%);
         color: white;
-        padding: 3rem 0 1rem;
+        padding: 4rem 0 1rem;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: 4rem;
       }
 
       .footer-content {
@@ -375,7 +440,8 @@
 
       .footer-section h3 {
         margin-bottom: 1.5rem;
-        color: #ff6b8b;
+        color: white;
+        font-size: 1.4rem;
       }
 
       .footer-section ul {
@@ -383,48 +449,51 @@
       }
 
       .footer-section ul li {
-        margin-bottom: 0.8rem;
+        margin-bottom: 1rem;
       }
 
       .footer-section ul li a {
-        color: #ddd;
+        color: rgba(255, 255, 255, 0.9);
         text-decoration: none;
         transition: color 0.3s;
       }
 
       .footer-section ul li a:hover {
-        color: #ff6b8b;
+        color: white;
+        text-decoration: underline;
       }
 
       .social-links {
         display: flex;
         gap: 1rem;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
 
       .social-links a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        background-color: #444;
+        width: 45px;
+        height: 45px;
+        background-color: rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         color: white;
         text-decoration: none;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
       }
 
       .social-links a:hover {
-        background-color: #ff6b8b;
+        background-color: white;
+        color: #ff6b8b;
+        transform: translateY(-3px);
       }
 
       .copyright {
         text-align: center;
         padding-top: 2rem;
-        border-top: 1px solid #444;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
         font-size: 0.9rem;
-        color: #aaa;
+        color: rgba(255, 255, 255, 0.8);
       }
 
       /* Responsive Styles */
@@ -440,7 +509,7 @@
           top: 100%;
           left: 0;
           width: 100%;
-          background-color: #ff6b8b;
+          background: linear-gradient(135deg, #ff6b8b 0%, #ffd166 100%);
           padding: 1rem 0;
         }
 
@@ -455,17 +524,44 @@
         }
 
         .hero h1 {
-          font-size: 2.2rem;
+          font-size: 2.5rem;
         }
 
         .hero p {
-          font-size: 1rem;
+          font-size: 1.1rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      /* Special Lustre' Effects */
+      .sparkle {
+        background: linear-gradient(45deg, #ff6b8b, #ffd166, #ff6b8b);
+        background-size: 200% 200%;
+        animation: sparkle 3s ease-in-out infinite;
+      }
+
+      @keyframes sparkle {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
         }
       }
     </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -474,8 +570,8 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <i class="fas fa-ice-cream"></i>
-            Sweet Delights
+            <i class="fas fa-gem"></i>
+            Lustre' Dessert
           </div>
           <div class="mobile-menu">
             <i class="fas fa-bars"></i>
@@ -495,42 +591,43 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Dessert Premium dengan Rasa Terbaik</h1>
+        <h1>Lustre' Dessert - Kelezatan yang Berkilau</h1>
         <p>
-          Nikmati kelezatan dessert berkualitas tinggi dengan bahan-bahan
-          pilihan terbaik. Dibuat dengan penuh cinta untuk memanjakan lidah
-          Anda.
+          Setiap gigitan adalah pengalaman berkilau dengan rasa premium yang
+          memanjakan lidah. Dessert dengan kualitas terbaik dan penyajian
+          elegan.
         </p>
-        <a href="#menu" class="btn">Lihat Menu</a>
+        <a href="#menu" class="btn sparkle">Jelajahi Menu</a>
       </div>
     </section>
 
     <!-- Business Profile Section -->
     <section id="profile">
       <div class="container">
-        <h2 class="section-title">Profil Bisnis</h2>
+        <h2 class="section-title">Profil Lustre' Dessert</h2>
         <div class="profile-grid">
           <div class="profile-card">
-            <h3><i class="fas fa-eye"></i> Visi</h3>
+            <h3><i class="fas fa-gem"></i> Visi Kami</h3>
             <p>
-              Menjadi penyedia dessert terdepan yang menghadirkan pengalaman
-              kuliner tak terlupakan dengan inovasi rasa dan kualitas terbaik.
+              Menjadi destinasi utama dessert premium yang menghadirkan
+              pengalaman kuliner berkilau dengan inovasi rasa tak terbatas dan
+              kualitas terbaik.
             </p>
           </div>
           <div class="profile-card">
-            <h3><i class="fas fa-bullseye"></i> Misi</h3>
+            <h3><i class="fas fa-star"></i> Misi Kami</h3>
             <p>
-              Menyajikan dessert berkualitas premium dengan bahan-bahan
-              terpilih, menjaga konsistensi rasa, dan memberikan pelayanan
-              terbaik kepada pelanggan.
+              Menciptakan dessert dengan bahan-bahan premium, teknik penyajian
+              elegan, dan pelayanan terbaik untuk memancarkan kilau kebahagiaan
+              setiap pelanggan.
             </p>
           </div>
           <div class="profile-card">
-            <h3><i class="fas fa-home"></i> Rumah Produksi</h3>
+            <h3><i class="fas fa-home"></i> Dapur Berkilau</h3>
             <p>
-              Produk kami diproduksi di dapur modern yang memenuhi standar
-              kebersihan dan keamanan pangan tertinggi. Setiap proses produksi
-              diawasi langsung oleh ahli pastry berpengalaman.
+              Setiap dessert dibuat di dapur modern berstandar tinggi dengan
+              pengawasan ahli pastry berpengalaman. Kebersihan dan kualitas
+              adalah prioritas utama.
             </p>
           </div>
         </div>
@@ -538,45 +635,45 @@
     </section>
 
     <!-- About Product Section -->
-    <section id="about" style="background-color: #fff5f7">
+    <section id="about" style="background-color: #fffaf0">
       <div class="container">
-        <h2 class="section-title">Tentang Produk</h2>
+        <h2 class="section-title">Kilau Kualitas Kami</h2>
         <div class="about-content">
           <div class="about-image">
             <img
               src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Dessert Premium"
+              alt="Lustre' Dessert Premium"
             />
           </div>
           <div class="about-text">
-            <h3>Kelezatan yang Tak Tertandingi</h3>
+            <h3>Kelezatan yang Memancarkan Kilau</h3>
             <p>
-              Setiap dessert kami dibuat dengan bahan-bahan premium pilihan.
-              Kami hanya menggunakan bahan terbaik untuk memastikan cita rasa
-              yang konsisten dan memuaskan.
+              Lustre' Dessert menghadirkan pengalaman dessert tak terlupakan
+              dengan kombinasi sempurna antara rasa, tekstur, dan penyajian
+              elegan.
             </p>
 
             <div class="features">
-              <h4>Keunggulan Produk:</h4>
+              <h4>Keunggulan Lustre':</h4>
               <div class="feature-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Bahan-bahan premium impor dan lokal terbaik</span>
+                <i class="fas fa-sparkles"></i>
+                <span>Bahan premium pilihan dengan kualitas terbaik</span>
               </div>
               <div class="feature-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Tanpa pengawet dan pewarna buatan</span>
+                <i class="fas fa-heart"></i>
+                <span>Dibuat dengan penuh cinta dan perhatian detail</span>
               </div>
               <div class="feature-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Dibuat fresh setiap hari dengan proses higienis</span>
+                <i class="fas fa-leaf"></i>
+                <span>100% natural tanpa pengawet atau pewarna buatan</span>
               </div>
               <div class="feature-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Rasa yang khas dan konsisten</span>
+                <i class="fas fa-crown"></i>
+                <span>Penyajian elegan yang instagrammable</span>
               </div>
               <div class="feature-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Packaging eksklusif dan aman</span>
+                <i class="fas fa-award"></i>
+                <span>Konsistensi rasa yang selalu berkilau</span>
               </div>
             </div>
           </div>
@@ -587,13 +684,15 @@
     <!-- Menu Section -->
     <section id="menu">
       <div class="container">
-        <h2 class="section-title">Menu Dessert</h2>
+        <h2 class="section-title">Menu Berkilau Lustre'</h2>
         <div class="menu-tabs">
-          <button class="tab-btn active" data-category="all">Semua</button>
-          <button class="tab-btn" data-category="cake">Kue</button>
-          <button class="tab-btn" data-category="pastry">Pastry</button>
-          <button class="tab-btn" data-category="icecream">Ice Cream</button>
-          <button class="tab-btn" data-category="bundle">Bundling</button>
+          <button class="tab-btn active" data-category="all">Semua Menu</button>
+          <button class="tab-btn" data-category="cake">Kue Premium</button>
+          <button class="tab-btn" data-category="pastry">Pastry Elegan</button>
+          <button class="tab-btn" data-category="special">
+            Spesial Lustre'
+          </button>
+          <button class="tab-btn" data-category="bundle">Paket Berkilau</button>
         </div>
 
         <div class="menu-grid">
@@ -602,37 +701,52 @@
             <div class="menu-image">
               <img
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Chocolate Lava Cake"
+                alt="Golden Velvet Cake"
               />
             </div>
             <div class="menu-details">
-              <h3>Chocolate Lava Cake</h3>
-              <p>Kue coklat lembut dengan lelehan coklat di dalamnya.</p>
-              <div class="price">Rp 45.000</div>
+              <h3>Golden Velvet Cake</h3>
+              <p>
+                Kue velvet lembut dengan lapisan cream cheese premium dan
+                sentuhan emas edible.
+              </p>
+              <div class="price">Rp 85.000</div>
             </div>
           </div>
 
           <!-- Menu Item 2 -->
           <div class="menu-item" data-category="pastry">
             <div class="menu-image">
-              <img src="images/almond_croissant.jpeg" alt="Croissant" />
+              <img
+                src="https://images.unsplash.com/photo-1558318123-47c0f54d0bda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Sparkling Croissant"
+              />
             </div>
             <div class="menu-details">
-              <h3>Almond Croissant</h3>
-              <p>Croissant renyah dengan isian almond cream yang gurih.</p>
-              <div class="price">Rp 32.000</div>
+              <h3>Sparkling Croissant</h3>
+              <p>
+                Croissant dengan lapisan almond dan filling vanilla bean,
+                taburan gula berkilau.
+              </p>
+              <div class="price">Rp 45.000</div>
             </div>
           </div>
 
           <!-- Menu Item 3 -->
-          <div class="menu-item" data-category="icecream">
+          <div class="menu-item" data-category="special">
             <div class="menu-image">
-              <img src="images/gelato.jpeg" alt="Ice Cream" />
+              <img
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Diamond Gelato"
+              />
             </div>
             <div class="menu-details">
-              <h3>Gelato Trio</h3>
-              <p>Tiga pilihan rasa gelato premium dalam satu cup.</p>
-              <div class="price">Rp 38.000</div>
+              <h3>Diamond Gelato</h3>
+              <p>
+                Gelato premium tiga rasa dengan topping kristal gula dan edible
+                glitter.
+              </p>
+              <div class="price">Rp 65.000</div>
             </div>
           </div>
 
@@ -641,39 +755,52 @@
             <div class="menu-image">
               <img
                 src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Dessert Box"
+                alt="Lustre Box Premium"
               />
             </div>
             <div class="menu-details">
-              <h3>Dessert Box Premium</h3>
+              <h3>Lustre Box Premium</h3>
               <p>
-                Paket berisi 4 jenis dessert pilihan dalam kemasan eksklusif.
+                Paket berisi 6 dessert signature dalam kemasan eksklusif
+                berkilau.
               </p>
-              <div class="price">Rp 150.000</div>
+              <div class="price">Rp 250.000</div>
             </div>
           </div>
 
           <!-- Menu Item 5 -->
           <div class="menu-item" data-category="cake">
             <div class="menu-image">
-              <img src="images/cheesecake.jpeg" alt="Cheesecake" />
+              <img
+                src="https://images.unsplash.com/photo-1570475735025-6cd1a5c4d6a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Ruby Cheesecake"
+              />
             </div>
             <div class="menu-details">
-              <h3>New York Cheesecake</h3>
-              <p>Cheesecake klasik dengan tekstur lembut dan rasa yang kaya.</p>
-              <div class="price">Rp 65.000</div>
+              <h3>Ruby Cheesecake</h3>
+              <p>
+                Cheesecake dengan lapisan raspberry ruby dan base biscuit yang
+                crunchy.
+              </p>
+              <div class="price">Rp 95.000</div>
             </div>
           </div>
 
           <!-- Menu Item 6 -->
-          <div class="menu-item" data-category="pastry">
+          <div class="menu-item" data-category="special">
             <div class="menu-image">
-              <img src="images/macaron.jpeg" alt="Macaron" />
+              <img
+                src="https://images.unsplash.com/photo-1590080875485-7d5ac4087c2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Crystal Macaron"
+              />
             </div>
             <div class="menu-details">
-              <h3>Macaron Box</h3>
-              <p>Set box berisi 6 macaron dengan varian rasa yang berbeda.</p>
-              <div class="price">Rp 85.000</div>
+              <h3>Crystal Macaron</h3>
+              <p>
+                Set macaron dengan varian rasa unik dan dekorasi kristal gula
+                yang memukau.
+              </p>
+              <div class="price">Rp 120.000</div>
             </div>
           </div>
         </div>
@@ -681,24 +808,27 @@
     </section>
 
     <!-- Order Section -->
-    <section id="order" style="background-color: #fff5f7">
+    <section
+      id="order"
+      style="background: linear-gradient(135deg, #fff0f5 0%, #fffaf0 100%)"
+    >
       <div class="container">
-        <h2 class="section-title">Pemesanan</h2>
+        <h2 class="section-title">Pesan Kilau Anda</h2>
         <div class="order-container">
           <div class="order-info">
-            <h3>Hubungi Kami</h3>
+            <h3>Hubungi Lustre' Dessert</h3>
             <p>
-              Silakan hubungi kami melalui berbagai channel di bawah ini untuk
-              melakukan pemesanan atau konsultasi produk.
+              Pesan dessert berkilau Anda melalui berbagai channel berikut. Kami
+              siap melayani dengan penuh elegan.
             </p>
 
             <div class="contact-methods">
               <div class="contact-method">
                 <i class="fab fa-whatsapp"></i>
                 <div>
-                  <h4>WhatsApp Business</h4>
+                  <h4>WhatsApp Luxury</h4>
                   <a href="https://wa.me/6281234567890" target="_blank"
-                    >+62 812-3456-7892</a
+                    >+62 812-3456-7890</a
                   >
                 </div>
               </div>
@@ -707,8 +837,8 @@
                 <i class="fab fa-instagram"></i>
                 <div>
                   <h4>Instagram</h4>
-                  <a href="https://instagram.com/sweetdelights" target="_blank"
-                    >@sweetdelights</a
+                  <a href="https://instagram.com/lustredessert" target="_blank"
+                    >@lustredessert</a
                   >
                 </div>
               </div>
@@ -716,80 +846,100 @@
               <div class="contact-method">
                 <i class="fas fa-envelope"></i>
                 <div>
-                  <h4>Email</h4>
-                  <a href="mailto:info@sweetdelights.com"
-                    >info@sweetdelights.com</a
+                  <h4>Email Premium</h4>
+                  <a href="mailto:hello@lustredessert.com"
+                    >hello@lustredessert.com</a
                   >
                 </div>
               </div>
 
               <div class="contact-method">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-map-marker-alt"></i>
                 <div>
-                  <h4>Telepon</h4>
-                  <a href="tel:+62211234567">(021) 123-4567</a>
+                  <h4>Dapur Berkilau</h4>
+                  <span>Jl. Kemilau No. 123, Jakarta Selatan</span>
                 </div>
               </div>
             </div>
 
-            <h3 style="margin-top: 2rem">Jam Operasional</h3>
+            <h3 style="margin-top: 2rem">Jam Operasional Berkilau</h3>
             <p>Senin - Minggu: 08.00 - 21.00 WIB</p>
+            <p><em>*Pemesanan H-1 untuk kualitas terbaik</em></p>
           </div>
 
           <div class="order-form">
-            <h3>Form Pemesanan</h3>
-            <p>Isi form berikut untuk pemesanan yang lebih cepat.</p>
+            <h3>Form Pemesanan Elegan</h3>
+            <p>
+              Isi form untuk pengalaman pemesanan yang lebih personal dan
+              elegan.
+            </p>
 
             <form id="orderForm">
               <div class="form-group">
                 <label for="name">Nama Lengkap</label>
-                <input type="text" id="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Masukkan nama Anda"
+                />
               </div>
 
               <div class="form-group">
-                <label for="phone">Nomor Telepon/WhatsApp</label>
-                <input type="tel" id="phone" required />
+                <label for="phone">Nomor WhatsApp</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  placeholder="Contoh: 081234567890"
+                />
               </div>
 
               <div class="form-group">
-                <label for="product">Pilih Produk</label>
+                <label for="product">Pilih Dessert Berkilau</label>
                 <select id="product" required>
-                  <option value="">-- Pilih Produk --</option>
-                  <option value="Chocolate Lava Cake">
-                    Chocolate Lava Cake
+                  <option value="">-- Pilih Menu Lustre' --</option>
+                  <option value="Golden Velvet Cake">
+                    Golden Velvet Cake - Rp 85.000
                   </option>
-                  <option value="Almond Croissant">Almond Croissant</option>
-                  <option value="Gelato Trio">Gelato Trio</option>
-                  <option value="Dessert Box Premium">
-                    Dessert Box Premium
+                  <option value="Sparkling Croissant">
+                    Sparkling Croissant - Rp 45.000
                   </option>
-                  <option value="New York Cheesecake">
-                    New York Cheesecake
+                  <option value="Diamond Gelato">
+                    Diamond Gelato - Rp 65.000
                   </option>
-                  <option value="Macaron Box">Macaron Box</option>
+                  <option value="Lustre Box Premium">
+                    Lustre Box Premium - Rp 250.000
+                  </option>
+                  <option value="Ruby Cheesecake">
+                    Ruby Cheesecake - Rp 95.000
+                  </option>
+                  <option value="Crystal Macaron">
+                    Crystal Macaron - Rp 120.000
+                  </option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="quantity">Jumlah</label>
+                <label for="quantity">Jumlah Pesanan</label>
                 <input type="number" id="quantity" min="1" value="1" required />
               </div>
 
               <div class="form-group">
-                <label for="date">Tanggal Pengambilan/Pengiriman</label>
+                <label for="date">Tanggal Pengambilan</label>
                 <input type="date" id="date" required />
               </div>
 
               <div class="form-group">
-                <label for="message">Catatan Tambahan</label>
+                <label for="message">Catatan Khusus</label>
                 <textarea
                   id="message"
-                  placeholder="Tulis catatan khusus atau alergi tertentu..."
+                  placeholder="Tulis catatan khusus, alergi, atau permintaan dekorasi..."
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn" style="width: 100%">
-                Kirim Pesanan
+              <button type="submit" class="btn sparkle" style="width: 100%">
+                Kirim Pesanan Berkilau
               </button>
             </form>
           </div>
@@ -802,44 +952,48 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>Sweet Delights</h3>
+            <h3>Lustre' Dessert</h3>
             <p>
-              Penyedia dessert premium dengan cita rasa terbaik dan bahan-bahan
-              pilihan.
+              Menghadirkan kelezatan dessert premium dengan sentuhan kilau
+              elegan untuk setiap momen spesial Anda.
             </p>
             <div class="social-links">
               <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-tiktok"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
           </div>
 
           <div class="footer-section">
-            <h3>Link Cepat</h3>
+            <h3>Menu Kilau</h3>
             <ul>
-              <li><a href="#profile">Profil Bisnis</a></li>
-              <li><a href="#about">Tentang Produk</a></li>
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#order">Pemesanan</a></li>
+              <li><a href="#menu">Kue Premium</a></li>
+              <li><a href="#menu">Pastry Elegan</a></li>
+              <li><a href="#menu">Spesial Lustre'</a></li>
+              <li><a href="#menu">Paket Berkilau</a></li>
             </ul>
           </div>
 
           <div class="footer-section">
-            <h3>Kontak</h3>
+            <h3>Kontak Berkilau</h3>
             <ul>
               <li>
-                <i class="fas fa-map-marker-alt"></i> Jl. Dessert No. 123,
+                <i class="fas fa-map-marker-alt"></i> Jl. Kemilau No. 123,
                 Jakarta
               </li>
-              <li><i class="fas fa-phone"></i> (021) 123-4567</li>
-              <li><i class="fas fa-envelope"></i> info@sweetdelights.com</li>
+              <li><i class="fas fa-phone"></i> (021) 456-7890</li>
+              <li><i class="fas fa-envelope"></i> hello@lustredessert.com</li>
+              <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
             </ul>
           </div>
         </div>
 
         <div class="copyright">
-          <p>&copy; 2023 Sweet Delights. All Rights Reserved.</p>
+          <p>
+            &copy; 2024 Lustre' Dessert. All Rights Reserved. | Crafted with 💖
+            and ✨
+          </p>
         </div>
       </div>
     </footer>
@@ -858,14 +1012,11 @@
 
       tabBtns.forEach((btn) => {
         btn.addEventListener("click", function () {
-          // Remove active class from all buttons
           tabBtns.forEach((b) => b.classList.remove("active"));
-          // Add active class to clicked button
           this.classList.add("active");
 
           const category = this.getAttribute("data-category");
 
-          // Show/hide menu items based on category
           menuItems.forEach((item) => {
             if (
               category === "all" ||
@@ -885,7 +1036,6 @@
         .addEventListener("submit", function (e) {
           e.preventDefault();
 
-          // Get form values
           const name = document.getElementById("name").value;
           const phone = document.getElementById("phone").value;
           const product = document.getElementById("product").value;
@@ -893,29 +1043,36 @@
           const date = document.getElementById("date").value;
           const message = document.getElementById("message").value;
 
-          // Create WhatsApp message
           const whatsappMessage =
-            `Halo Sweet Delights, saya ingin memesan:%0A%0A` +
-            `Nama: ${name}%0A` +
-            `No. HP: ${phone}%0A` +
-            `Produk: ${product}%0A` +
-            `Jumlah: ${quantity}%0A` +
-            `Tanggal: ${date}%0A` +
-            `Catatan: ${message || "Tidak ada"}`;
+            `Halo Lustre' Dessert! Saya ingin memesan dessert berkilau:%0A%0A` +
+            `✨ Nama: ${name}%0A` +
+            `📞 WhatsApp: ${phone}%0A` +
+            `🎂 Dessert: ${product}%0A` +
+            `📦 Jumlah: ${quantity}%0A` +
+            `📅 Tanggal: ${date}%0A` +
+            `💫 Catatan: ${message || "Tidak ada"}`;
 
-          // Open WhatsApp with pre-filled message
           window.open(
             `https://wa.me/6281234567890?text=${whatsappMessage}`,
             "_blank"
           );
-
-          // Reset form
           this.reset();
         });
 
       // Set minimum date for order form to today
       const today = new Date().toISOString().split("T")[0];
       document.getElementById("date").setAttribute("min", today);
+
+      // Add sparkle effect to menu items on hover
+      menuItems.forEach((item) => {
+        item.addEventListener("mouseenter", function () {
+          this.style.boxShadow = "0 20px 40px rgba(255, 107, 139, 0.3)";
+        });
+
+        item.addEventListener("mouseleave", function () {
+          this.style.boxShadow = "0 10px 30px rgba(255, 107, 139, 0.1)";
+        });
+      });
     </script>
   </body>
 </html>
